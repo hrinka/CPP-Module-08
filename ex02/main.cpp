@@ -21,6 +21,27 @@ int main() {
     }
     std::cout << std::endl;
 
+    // const_iteratorを使用して要素を出力
+    std::cout << "MutantStack contents (using const_iterator): ";
+    for (MutantStack<int>::const_iterator it = mstack.begin(); it != mstack.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    // reverse_iteratorを使用して要素を出力
+    std::cout << "MutantStack contents (using reverse_iterator): ";
+    for (MutantStack<int>::reverse_iterator rit = mstack.rbegin(); rit != mstack.rend(); ++rit) {
+        std::cout << *rit << " ";
+    }
+    std::cout << std::endl;
+
+    // const_reverse_iteratorを使用して要素を出力
+    std::cout << "MutantStack contents (using const_reverse_iterator): ";
+    for (MutantStack<int>::const_reverse_iterator rit = mstack.rbegin(); rit != mstack.rend(); ++rit) {
+        std::cout << *rit << " ";
+    }
+    std::cout << std::endl;
+
     // std::listで同様の動作を確認
     std::list<int> lst;
     lst.push_back(5);
@@ -34,6 +55,27 @@ int main() {
     std::cout << "List contents: ";
     for (std::list<int>::iterator it = lst.begin(); it != lst.end(); ++it) {
         std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    // const_iteratorを使用して要素を出力
+    std::cout << "List contents (using const_iterator): ";
+    for (std::list<int>::const_iterator it = lst.begin(); it != lst.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    // reverse_iteratorを使用して要素を出力
+    std::cout << "List contents (using reverse_iterator): ";
+    for (std::list<int>::reverse_iterator rit = lst.rbegin(); rit != lst.rend(); ++rit) {
+        std::cout << *rit << " ";
+    }
+    std::cout << std::endl;
+
+    // const_reverse_iteratorを使用して要素を出力
+    std::cout << "List contents (using const_reverse_iterator): ";
+    for (std::list<int>::const_reverse_iterator rit = lst.rbegin(); rit != lst.rend(); ++rit) {
+        std::cout << *rit << " ";
     }
     std::cout << std::endl;
 
