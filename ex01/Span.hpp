@@ -14,9 +14,9 @@ public:
     ~Span();
 
     void addNumber(int number);
-    template <typename InputIterator>
+    // template <typename InputIterator>
     // void addRange(InputIterator begin, InputIterator end);
-    //     template <typename InputIterator>
+    template <typename InputIterator>
     void addRange(InputIterator begin, InputIterator end) {
         if (std::distance(begin, end) + numbers_.size() > maxSize_) {
             throw std::out_of_range("Adding range exceeds the maximum capacity of Span");
@@ -26,6 +26,7 @@ public:
 
     int shortestSpan() const;
     int longestSpan() const;
+    std::vector<int> getNumbers() const { return numbers_; }
 
 private:
     unsigned int maxSize_;

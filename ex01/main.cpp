@@ -13,6 +13,14 @@ int main() {
         sp.addNumber(17);
         sp.addNumber(9);
         sp.addNumber(11);
+        sp.addNumber(5);
+
+        // すべての数値を出力
+        std::vector<int> numbers = sp.getNumbers();
+        std::cout << "Numbers in sp: ";
+        for (std::vector<int>::iterator it = numbers.begin(); it != numbers.end(); ++it) {
+            std::cout << *it << " ";
+        }
 
         std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
         std::cout << "Longest span: " << sp.longestSpan() << std::endl;
@@ -34,6 +42,15 @@ int main() {
 
         Span rangeSpan(1000);
         rangeSpan.addRange(rangeVec.begin(), rangeVec.end());
+
+        // rangeSpanの全ての数値を出力
+        std::vector<int> rangeSpanNumbers = rangeSpan.getNumbers();
+        std::cout << "Numbers in rangeSpan: ";
+        for (std::vector<int>::iterator it = rangeSpanNumbers.begin(); it != rangeSpanNumbers.end(); ++it) {
+            std::cout << *it << " ";
+        }
+        std::cout << std::endl;
+
         std::cout << "Shortest span in rangeSpan: " << rangeSpan.shortestSpan() << std::endl;
         std::cout << "Longest span in rangeSpan: " << rangeSpan.longestSpan() << std::endl;
 
